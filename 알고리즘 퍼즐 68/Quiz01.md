@@ -6,9 +6,7 @@
 
 <br>
 
-~~함수 이름들이 좀 구리긴 한데...~~
-
-n진수 공통으로 사용할 수 있는 `checkDaeChing`을 통해 해당 숫자가 10진수/8진수/2진수에서 대칭인지를 확인하고, 모두 대칭일 경우에만 `check`의 반환값으로 true를 리턴한다.
+n진수 공통으로 사용할 수 있는 `checkDaeChing`을 통해 해당 숫자가 10진수/8진수/2진수에서 대칭인지를 확인하고, 모두 대칭일 경우에만 `check`의 반환값으로 true를 리턴한다. ~~함수 이름들이 좀 구리긴 한데...~~
 
 ```swift
 func check(for number: Int) -> Bool {
@@ -32,23 +30,22 @@ func check(for number: Int) -> Bool {
 
 먼저, n진수의 n으로 나눈 나머지를 이용하여 전환하는 방법.<br>
 
-각 자리수를 `A`에 저장하고, 맨 처음/맨끝 -> 맨 처음+1/맨끝 -1 ... 이 같은 수인지를 확인하고 같지 않을 경우 false, 모두 같을 경우 true를 리턴한다.
+각 자리수를 `newNArray`에 저장하고, 그것을 뒤집은 `reversed	`와 비교하여 같을 경우 true를 반환한다.<br>
+
+참고로 reversed() 적용 후의 기본 타입은 **ReversedCollection<[Int]>**가 된다.
 
 ```swift
     func checkDaeChing(for number: Int, _ jinsoo: Int) -> Bool {
         var N = number
-        var A: [Int] = []
+        var newNArray: [Int] = []
 
         while N != 0 {
-            A.insert(N % jinsoo, at: 0)
+            newNArray.insert(N % jinsoo, at: 0)
             N = N / jinsoo
         }
 
-        let C = A.count-1
-        for i in 0...C {
-            if A[i] != A[C-i] { return false }
-        }
-        return true
+        let reversed = [Int](newNArray.reversed())
+        return newNArray == reversed ? true : false
     }
 ```
 
@@ -66,18 +63,16 @@ let binaryNumber = String(10, radix: 2)
 
 <br>
 
-따라서 아래와 같이 작성하면 위와 같은 결과를 얻을 수 있다.
+따라서 아래와 같이 작성하면 위와 같은 결과를 얻을 수 있다. 길이로 따지자면 훨씬 짧다.<br>
+
+`newN`이 String 타입으로 생성되므로 이번엔 String으로 변환한 `reversed` 와 비교해준다.
 
 ```swift
     func checkDaeChing(for number: Int, _ jinsoo: Int) -> Bool {
         let newN = String(number, radix: jinsoo)
-        let newNArray = newN.map{ String($0) }
-        let C = newN.count-1
+        let reversed = String(newN.reversed())
 
-        for i in 0...C {
-            if newNArray[i] != newNArray[C-i] { return false }
-        }
-        return true
+        return newN == reversed ? true : false
     }
 ```
 
@@ -100,5 +95,7 @@ while result == false {
 
 print(n) //585
 ```
+
+<br>
 
 정답은 585! 👏🏻👏🏻👏🏻
