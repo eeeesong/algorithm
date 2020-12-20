@@ -18,7 +18,7 @@
  - 계산 후에도 4자리수여야 하므로 곱셈 외의 연산 기호가 사용될 수 없다
  - 최소 한번은 연산되어야 한다
  String으로 계산식 만든 뒤, NSExpression 통해 값 가져오기
- https://nshipster.com/nsexpression/
+ https:nshipster.com/nsexpression/
  */
 
 import Foundation
@@ -38,15 +38,17 @@ func getCalc(for n: Int) -> Bool {
                 let calculation =
                     numberInArray[0] + operation[a] +
                     numberInArray[1] + operation[b] +
-                    numberInArray[2] + operation[c] +
-                    numberInArray[3]
+                    numberInArray[2] + operation[c] + numberInArray[3]
                 
-                if numberInString.count != 4 {
+                if calculation.count != 4 {
                     let calcNumber = NSExpression(format: calculation)
                     let newNumber = calcNumber.expressionValue(with: nil, context: nil) as? Int
                     numberInString = String(newNumber!)
                     
-                    if numberInString == reversedNumberInString { return true }
+                    if numberInString == reversedNumberInString {
+                        print("\(n) -> \(calculation) = \(numberInString)")
+                        return true
+                    }
                 }
             }
         }
@@ -63,3 +65,6 @@ while number < 10000 {
 }
 
 print(result)
+
+// 5931 -> 5*9*31 = 1395
+// [5931]
