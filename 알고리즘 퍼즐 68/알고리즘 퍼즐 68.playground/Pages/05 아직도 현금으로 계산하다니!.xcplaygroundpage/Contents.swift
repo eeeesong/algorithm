@@ -6,11 +6,11 @@
 import Foundation
 
 //반복문 활용
-func exchange(money: Int) -> Int {
-    let coin = [500, 100, 50, 10]
+func exchange(money: Int, coins: [Int], maxCount: Int) -> Int {
+    let coin = coins
     var max: [Int] = []
     for c in 0...coin.count-1 {
-        let maxCount = money/coin[c] <= 15 ? money/coin[c] : 15
+        let maxCount = money/coin[c] <= maxCount ? money/coin[c] : maxCount
         max.insert(maxCount, at: c)
     }
     return getExchangeWays(money, coin, max)
@@ -33,7 +33,10 @@ func getExchangeWays(_ money: Int,_ coin: [Int],_ max: [Int]) -> Int {
     return count
 }
 
-exchange(money: 1000)
+exchange(money: 1000, coins: [500,100,50,10], maxCount: 15)
 
 
 //재귀 활용
+
+
+
