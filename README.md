@@ -1,10 +1,32 @@
 # algorithm
 코딩테스트 문제 풀이
 
-## 📁 백준
-[Baekjoon Online Judge](https://www.acmicpc.net)의 문제 풀이 내용 
-- [if 문 단계](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/if문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
+<br>
 
+## 📁 백준
+[Baekjoon Online Judge](https://www.acmicpc.net)의 문제 풀이 내용
+> ⭕️성공<br>
+⏰시간 초과
+
+
+- [for문 단계](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/for문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
+  * ⭕️ 2739 구구단
+  * ⭕️ 10950 A+B -3 
+  * ⭕️ 8393 합 
+  * ⏰ 15552 빠른 A+B
+  * ⭕️ 2741 N 찍기 
+  * ⭕️ 2742 기찍 N 
+  * ⭕️ 11021 A+B -7 
+  * ⭕️ 11022 A+B -8  
+  * ⭕️ 2438 별 찍기 -1 
+  * ⭕️ 2439 별 찍기 -2
+  * ⭕️ 10871 X보다 작은 수
+- [if문 단계](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/if문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
+  * ⭕️ 1330 두 수 비교하기
+  * ⭕️ 9498 시험 성적  
+  * ⭕️ 2753 윤년
+  * ⭕️ 14681 사분면 고르기
+  * ⭕️ 2884 알람 시계
 <br>
 
 ## 📁 알고리즘 퍼즐 68
