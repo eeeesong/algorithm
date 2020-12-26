@@ -1,5 +1,11 @@
 # algorithm
-알고리즘 문제 풀이
+코딩테스트 문제 풀이
+
+## 📁 백준
+[Baekjoon Online Judge](https://www.acmicpc.net)의 문제 풀이 내용 
+- [if 문 단계](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/if문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
+
+<br>
 
 ## 📁 알고리즘 퍼즐 68
 [알고리즘 퍼즐 68](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788965402527&orderClick=LA6)의 문제 풀이 내용<br>
