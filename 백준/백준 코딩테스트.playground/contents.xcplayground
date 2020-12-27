@@ -3,6 +3,7 @@
     <pages>
         <page name='if문'/>
         <page name='for문'/>
-        <page name='while문'/>
+        <page name='1차원 배열'/>
+        <page name='while문'/>
     </pages>
 </playground>
