@@ -8,8 +8,19 @@
 > ⭕️성공<br>
 ⏰시간 초과
 
-
-- [for문 단계](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/for문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
+- [1차원 배열](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/1차원%20배열.xcplaygroundpage/Contents.swift) (Dec 27, 2020)
+  * ⏰ 10818 최소, 최대
+  * ⭕️ 2562 최댓값
+  * ⭕️ 2577 숫자의 개수
+  * ⭕️ 3052 나머지
+  *
+  *
+  *
+- [while문](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/while문.xcplaygroundpage/Contents.swift) (Dec 27, 2020)
+  * ⭕️ 10952 A+B -5
+  * ⭕️ 10951 A+B -4 
+  * ⭕️ 1110 더하기 사이클 
+- [for문](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/for문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
   * ⭕️ 2739 구구단
   * ⭕️ 10950 A+B -3 
   * ⭕️ 8393 합 
@@ -21,7 +32,7 @@
   * ⭕️ 2438 별 찍기 -1 
   * ⭕️ 2439 별 찍기 -2
   * ⭕️ 10871 X보다 작은 수
-- [if문 단계](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/if문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
+- [if문](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/if문.xcplaygroundpage/Contents.swift) (Dec 26, 2020)
   * ⭕️ 1330 두 수 비교하기
   * ⭕️ 9498 시험 성적  
   * ⭕️ 2753 윤년
