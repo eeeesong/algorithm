@@ -8,14 +8,14 @@
 > ⭕️성공<br>
 ⏰시간 초과
 
-- [1차원 배열](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/1차원%20배열.xcplaygroundpage/Contents.swift) (Dec 27, 2020)
+- [1차원 배열](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/1차원%20배열.xcplaygroundpage/Contents.swift) (Dec 27, 2020 / Jan 1, 2021)
   * ⏰ 10818 최소, 최대
   * ⭕️ 2562 최댓값
   * ⭕️ 2577 숫자의 개수
   * ⭕️ 3052 나머지
-  *
-  *
-  *
+  * ⭕️ 1546 평균
+  * ⭕️ 8958 OX퀴즈
+  * ⭕️ 4344 평균은 넘겠지
 - [while문](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/while문.xcplaygroundpage/Contents.swift) (Dec 27, 2020)
   * ⭕️ 10952 A+B -5
   * ⭕️ 10951 A+B -4 
