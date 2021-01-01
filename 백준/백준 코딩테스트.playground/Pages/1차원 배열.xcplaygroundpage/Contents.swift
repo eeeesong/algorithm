@@ -11,9 +11,9 @@ import Foundation
 */
 
 //시간 초과가 뜨는 코드
-//let N = Int(readLine()!)
-//let array = readLine()!.split(separator: " ").map{ Int($0)! }
-//print("\(array.min()!) \(array.max()!)")
+let N = Int(readLine()!)
+let array = readLine()!.split(separator: " ").map{ Int($0)! }
+print("\(array.min()!) \(array.max()!)")
 
 
 /*
@@ -26,18 +26,18 @@ import Foundation
  출력: 첫째 줄에 최댓값을 출력하고, 둘째 줄에 최댓값이 몇 번째 수인지를 출력한다.
 */
 
-//var a:[Int] = []
-//var m = 0, c = 9
-//
-//for i in 0...8 {
-//    a.append(Int(readLine()!)!)
-//    if m < a[i] {
-//        m = a[i]
-//        c = i+1
-//    }
-//}
-//
-//print("\(m)\n\(c)")
+var a:[Int] = []
+var m = 0, c = 9
+
+for i in 0...8 {
+    a.append(Int(readLine()!)!)
+    if m < a[i] {
+        m = a[i]
+        c = i+1
+    }
+}
+
+print("\(m)\n\(c)")
 
 
 /*
@@ -52,12 +52,12 @@ import Foundation
  출력: 첫째 줄에는 A×B×C의 결과에 0 이 몇 번 쓰였는지 출력한다. 마찬가지로 둘째 줄부터 열 번째 줄까지 A×B×C의 결과에 1부터 9까지의 숫자가 각각 몇 번 쓰였는지 차례로 한 줄에 하나씩 출력한다.
 */
 
-//let a = Int(readLine()!)!, b = Int(readLine()!)!, c = Int(readLine()!)!
-//let m = String(a*b*c).map{ String($0) }
-//for i in 0...9 {
-//    let c = m.filter{ $0 == String(i) }.count
-//    print(c)
-//}
+let a = Int(readLine()!)!, b = Int(readLine()!)!, c = Int(readLine()!)!
+let m = String(a*b*c).map{ String($0) }
+for i in 0...9 {
+    let c = m.filter{ $0 == String(i) }.count
+    print(c)
+}
 
 /*
 ✏️3052 나머지
@@ -69,11 +69,11 @@ import Foundation
  출력: 첫째 줄에, 42로 나누었을 때, 서로 다른 나머지가 몇 개 있는지 출력한다.
 */
 
-//var r: Set<Int> = []
-//for _ in 1...10 {
-//    r.insert(Int(readLine()!)!%42)
-//}
-//print(r.count)
+var r: Set<Int> = []
+for _ in 1...10 {
+    r.insert(Int(readLine()!)!%42)
+}
+print(r.count)
 
 /*
 ✏️1546 평균
@@ -85,3 +85,59 @@ import Foundation
 
  출력: 첫째 줄에 새로운 평균을 출력한다. 실제 정답과 출력값의 절대오차 또는 상대오차가 10-2 이하이면 정답이다.
 */
+
+let n = Int(readLine()!)!
+var scores = readLine()!.split(separator: " ").map{ Double($0)! }
+let max = scores.max()!
+var sum = 0.0
+
+for i in 0...n-1 {
+    scores[i] = scores[i]/max*100
+    sum += scores[i]
+}
+
+print(sum/Double(n))
+ 
+/*
+✏️8958 OX퀴즈
+ "OOXXOXXOOO"와 같은 OX퀴즈의 결과가 있다. O는 문제를 맞은 것이고, X는 문제를 틀린 것이다. 문제를 맞은 경우 그 문제의 점수는 그 문제까지 연속된 O의 개수가 된다. 예를 들어, 10번 문제의 점수는 3이 된다.
+ "OOXXOXXOOO"의 점수는 1+2+0+0+1+0+0+1+2+3 = 10점이다.
+ OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
+
+ 입력: 첫째 줄에 테스트 케이스의 개수가 주어진다. 각 테스트 케이스는 한 줄로 이루어져 있고, 길이가 0보다 크고 80보다 작은 문자열이 주어진다. 문자열은 O와 X만으로 이루어져 있다.
+
+ 출력: 각 테스트 케이스마다 점수를 출력한다.
+*/
+let n = Int(readLine()!)!
+for _ in 1...n {
+    let a = readLine()!.map{ $0 }
+    var c = 0, s = 0
+    for i in 0...a.count-1 {
+        if a[i] == "O" {
+            c += 1
+            s += c
+        } else {
+            c = 0
+        }
+    }
+    print(s)
+}
+
+/*
+✏️8958 OX퀴즈
+ 대학생 새내기들의 90%는 자신이 반에서 평균은 넘는다고 생각한다. 당신은 그들에게 슬픈 진실을 알려줘야 한다.
+
+ 입력: 첫째 줄에는 테스트 케이스의 개수 C가 주어진다. 둘째 줄부터 각 테스트 케이스마다 학생의 수 N(1 ≤ N ≤ 1000, N은 정수)이 첫 수로 주어지고, 이어서 N명의 점수가 주어진다. 점수는 0보다 크거나 같고, 100보다 작거나 같은 정수이다.
+
+ 출력: 각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여 소수점 셋째 자리까지 출력한다.
+*/
+let n = Int(readLine()!)!
+for _ in 1...n {
+    let s = readLine()!.split(separator: " ").map{ Double($0)! }
+    var av = 0.0, u = 0.0
+    for i in 1...Int(s[0]) { av += s[i] }
+    av /= s[0]
+    for i in 1...Int(s[0]) { if s[i] > av { u += 1 } }
+    print("\(String(format: "%.3f", u/s[0]*100))%")
+}
+
