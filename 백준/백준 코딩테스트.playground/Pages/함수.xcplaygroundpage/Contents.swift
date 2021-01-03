@@ -15,21 +15,21 @@ import Foundation
  출력: 10,000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 증가하는 순서로 출력한다.
  */
 
-//var s: Set<Int> = []
-//for i in 1...10000 {
-//    s.insert(d(i))
-//}
-//for j in 1...10000 {
-//    if !s.contains(j) { print(j) }
-//}
-//func d(_ n:Int) -> Int {
-//    var sum = n, now = n
-//    while now != 0 {
-//        sum += now%10
-//        now /= 10
-//    }
-//    return sum
-//}
+var s: Set<Int> = []
+for i in 1...10000 {
+    s.insert(d(i))
+}
+for j in 1...10000 {
+    if !s.contains(j) { print(j) }
+}
+func d(_ n:Int) -> Int {
+    var sum = n, now = n
+    while now != 0 {
+        sum += now%10
+        now /= 10
+    }
+    return sum
+}
 
 /*
  ✏️ 1065 한수
