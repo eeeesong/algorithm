@@ -1,4 +1,4 @@
-# algorithm
+# Algorithm
 코딩테스트 문제 풀이
 
 <br>
@@ -8,6 +8,9 @@
 > ⭕️성공<br>
 ⏰시간 초과
 
+- [함수](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/함수.xcplaygroundpage/Contents.swift) (Jan 3, 2020)
+  * ⭕️ 4673 셀프 넘버
+  * ⭕️ 1065 한수
 - [1차원 배열](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/1차원%20배열.xcplaygroundpage/Contents.swift) (Dec 27, 2020 / Jan 1, 2021)
   * ⏰ 10818 최소, 최대
   * ⭕️ 2562 최댓값
