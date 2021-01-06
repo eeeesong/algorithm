@@ -7,7 +7,11 @@
 [Baekjoon Online Judge](https://www.acmicpc.net)의 문제 풀이 내용
 > ⭕️성공<br>
 ⏰시간 초과
-
+- 코드스쿼드 알고리즘 Week1 (Jan 6, 2021)
+  * ⭕️ [1009 분산처리](https://github.com/eeeesong/Algorithm/blob/master/백준/1009.swift)
+  * ⭕️ [1076 저항](https://github.com/eeeesong/Algorithm/blob/master/백준/1076.swift)
+  * ⭕️ [1052 물병](https://github.com/eeeesong/Algorithm/blob/master/백준/1052.swift)
+  * ⭕️ [10757 큰 수 A+B](https://github.com/eeeesong/Algorithm/blob/master/백준/10757.swift)
 - [함수](https://github.com/eeeesong/Algorithm/blob/master/백준/백준%20코딩테스트.playground/Pages/함수.xcplaygroundpage/Contents.swift) (Jan 3, 2021)
   * ⭕️ 4673 셀프 넘버
   * ⭕️ 1065 한수
