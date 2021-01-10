@@ -7,6 +7,10 @@
 [Baekjoon Online Judge](https://www.acmicpc.net)의 문제 풀이 내용
 > ⭕️성공<br>
 ⏰시간 초과
+- 문자열 (Jan 10, 2021)
+  * ⭕️ [10809 알파벳 찾기](https://github.com/eeeesong/Algorithm/blob/master/백준/10809.swift)
+  * ⭕️ [11654 아스키 코드](https://github.com/eeeesong/Algorithm/blob/master/백준/11654.swift)
+  * ⭕️ [11720 숫자의 합](https://github.com/eeeesong/Algorithm/blob/master/백준/11720.swift)
 - 코드스쿼드 알고리즘 Week1 (Jan 6, 2021)
   * ⭕️ [1009 분산처리](https://github.com/eeeesong/Algorithm/blob/master/백준/1009.swift)
   * ⭕️ [1076 저항](https://github.com/eeeesong/Algorithm/blob/master/백준/1076.swift)
