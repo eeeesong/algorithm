@@ -1,7 +1,7 @@
 # Algorithm
-코딩테스트 문제 풀이
+알고리즘 문제 풀이
 
-<br>
+
 ## 📁 LeetCode
 [LeetCode](https://leetcode.com)의 문제 풀이 내용
 - [0001 TwoSum](https://github.com/eeeesong/Algorithm/blob/master/LeetCode/0001%20Two%20Sum.swift) (Jan 13, 2021)
