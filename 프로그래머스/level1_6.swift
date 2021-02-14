@@ -1,7 +1,21 @@
 //비밀지도
 //https://programmers.co.kr/learn/courses/30/lessons/17681
 
+//radix를 잊지 말자!
+func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
+    var answer: [String] = []
+    
+    for i in 0..<n {
+        answer.append(String(arr1[i] | arr2[i], radix: 2)
+                        .map{ $0 == "1" ? "#" : " " }
+                        .reduce("",+))
+    }
+    return answer
+}
 
+
+/*
+//수정 전 풀이
 func solution(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
     var answer: [String] = []
     
@@ -28,3 +42,4 @@ func combineTwoMaps(from number1: Int, _ number2: Int, finalCount: Int) -> Strin
     
     return map
 }
+*/
