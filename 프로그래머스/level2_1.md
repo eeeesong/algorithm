@@ -33,7 +33,7 @@
 
 ## 풀이
 
-- 10번에서 시간초과가 뜨는 풀이
+### O(n<sup>2</sup>) - 10번 시간초과
 
 ```swift
 func solution(_ number:String, _ k:Int) -> String {
@@ -66,6 +66,48 @@ func solution(_ number:String, _ k:Int) -> String {
         pickedNumbers[indexToStart] = currentNumber
     }
     return pickedNumbers.map{ String($0) }.reversed().joined()
+}
+```
+
+
+
+### O(N)으로 개선 - 10번 여전히 시간초과 
+
+- reversed()까지 없애 봤는데도...
+
+```swift
+func solution(_ number:String, _ k:Int) -> String {
+    let count = number.count
+    let digit = count-k
+    let allNumbers = number.map{ Int(String($0))! }
+    var pointer = count-digit
+    var currentNumber = allNumbers[pointer]
+    var currentIndex = pointer
+    var currentEndIndex = 0
+    var nextEndIndex = pointer
+    var answer = Array(repeating: 0, count: digit)
+
+    while pointer < count {
+        if currentIndex < currentEndIndex {
+            answer[digit-(count-pointer)] = currentNumber
+            pointer += 1
+            
+            if pointer >= count {
+                break
+            }
+            currentIndex = pointer
+            currentNumber = allNumbers[pointer]
+            currentEndIndex = nextEndIndex
+        }
+        let newNumber = allNumbers[currentIndex]
+        
+        if currentNumber <= newNumber {
+            currentNumber = newNumber
+            nextEndIndex = currentIndex+1
+        }
+        currentIndex -= 1
+    }
+    return answer.map { String($0) }.joined()
 }
 ```
 
