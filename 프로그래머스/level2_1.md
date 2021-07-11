@@ -111,3 +111,45 @@ func solution(_ number:String, _ k:Int) -> String {
 }
 ```
 
+
+
+### O(N) + 9 도달 시 빠른 종료
+
+```swift
+func solution(_ number:String, _ k:Int) -> String {
+    let count = number.count
+    let digit = count-k
+    let allNumbers = number.map{ Int(String($0))! }
+    var answer = Array(repeating: 0, count: digit)
+    
+    var currentEndIndex = count-digit
+    var currentHighestNumber = 0
+    var pointer = 0
+    var nextStartIndex = 1
+
+    while pointer < count {
+        let newNumber = allNumbers[pointer]
+        let targetAnswerIndex = digit-(count-currentEndIndex)
+
+        if newNumber > currentHighestNumber {
+            nextStartIndex = pointer+1
+            currentHighestNumber = newNumber
+        }
+        pointer += 1
+        
+        if pointer > currentEndIndex || newNumber == 9 {
+            answer[targetAnswerIndex] = currentHighestNumber
+            pointer = nextStartIndex
+            currentEndIndex += 1
+            
+            if currentEndIndex > count { break }
+            
+            currentHighestNumber = 0
+        }
+    }
+    return answer.map { String($0) }.joined()
+}
+```
+
+- 9에 도달하면 빠르게 종료시키기 위해 탐색의 시작점을 맨 앞(index 0)으로 옮겼다.
+- 대신 `newNumber`의 비교를 현재 자리수의 값에서 시작하는 게 아닌 0에서부터 시작하는 것으로 바꾸고,  `>=` 이 아닌 `>` 를 사용하도록 바꿨다. 배열의 앞에서 시작하기 때문에 뒤에 나오는 수가 앞의 것과 같아도 앞의 것을 써야하기 때문. (현재 자리수로부터 비교를 시작하면 같은 수가 나왔을 때 현재 자리수의 인덱스를 쓰게 된다)
